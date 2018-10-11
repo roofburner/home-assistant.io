@@ -156,7 +156,7 @@ Otherwise everything following the hash sign would be considered a YAML comment.
 
 ### {% linkable_title Sensor attributes %}
 
- - **offset_reached**: If set in the event title and parsed out will be `on`/`off` once the offset in the title in minutes is reached. So the title `Very important meeting #Important !!-10` would trigger this attribute to be `on` 10 minutes before the event starts.
+ - **offset_reached**: If set in the event title and parsed out will be `True`/`False` once the time offset (format +/-MM or +/-HH:MM) in the title is reached. So the title `Very important meeting #Important !!-10` or `Very important meeting #Important !!-00:10` would trigger this attribute to be `True` 10 minutes before the event starts.
  - **all_day**: `True`/`False` if this is an all day event. Will be `False` if there is no event found.
  - **message**: The event title with the `search` and `offset` values extracted. So in the above example for **offset_reached** the **message** would be set to `Very important meeting`
  - **description**: The event description.
